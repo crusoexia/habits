@@ -1,7 +1,7 @@
 # Setup guide
 
 ## List to setup
-- wsl proxy
+- _wsl_: proxy
 - oh-my-zsh
   * install zsh
   * set zsh as default shell
@@ -18,6 +18,8 @@
   * link .fzf.config.zsh
   * _ubuntu_: link fd-find to fd; export in the $PATH
   * install ripgrep
+- git
+  * link `.gitconfig`
 - nodejs
   * install nvm
   * link default-packages
