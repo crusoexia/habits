@@ -31,3 +31,6 @@
   * link coc-settings.json
   * link $HOME/.config/nvim to $HOME/.vim
   * install plugins
+
+## TODO
+- [ ] automate this
