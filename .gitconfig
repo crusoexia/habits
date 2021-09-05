@@ -1,0 +1,18 @@
+[user]
+	name = crusoexia
+	email = xiawenlan1984@gmail.com
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[core]
+	editor = nvim
+	ignorecase = false
+[http]
+	postBuffer = 524288000
+[remote "origin"]
+	proxy = 
+[pull]
+	ff = only
