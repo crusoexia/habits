@@ -31,6 +31,7 @@
   * link coc-settings.json
   * link $HOME/.config/nvim to $HOME/.vim
   * install plugins
+  * _wsl_: [How to use the Windows clipboard from WSL?](https://github.com/neovim/neovim/wiki/FAQ#how-to-use-the-windows-clipboard-from-wsl)
 
 ## TODO
 - [ ] automate this
