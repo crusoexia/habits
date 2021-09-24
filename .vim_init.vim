@@ -75,6 +75,9 @@ Plug 'sjl/badwolf'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 
+" Browser nvim extension support
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+
 call plug#end()
 
 filetype plugin on
