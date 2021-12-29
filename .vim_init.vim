@@ -92,11 +92,28 @@ let g:previm_open_cmd = 'open -a Safari'
 let g:vim_jsx_pretty_colorful_config = 1
 let g:neosnippet#enable_completed_snippet = 1
 let g:startify_session_persistence = 1
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'json', 'java']
+let g:markdown_fenced_languages = [
+  \'html', 
+  \'python', 
+  \'bash=sh', 
+  \'javascript', 
+  \'json', 
+  \'java'
+\]
 let g:notes_directories = ['~/Documents/notes']
 
 " coc.vim extensions
-let g:coc_global_extensions = ['coc-stylelintplus', 'coc-html', 'coc-highlight', 'coc-eslint', 'coc-yaml', 'coc-tsserver', 'coc-svg', 'coc-json', 'coc-css']
+let g:coc_global_extensions = [
+  \'coc-stylelintplus', 
+  \'coc-html', 
+  \'coc-highlight', 
+  \'coc-eslint', 
+  \'coc-yaml', 
+  \'coc-tsserver', 
+  \'coc-svg', 
+  \'coc-json', 
+  \'coc-css'
+\]
 
 " Font, color and theme
 syntax on
