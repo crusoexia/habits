@@ -21,9 +21,9 @@
 - git
   * link `.gitconfig`
 - nodejs
-  * install nvm
-  * link default-packages
-  * install specific nodejs
+  * install volta
+  * install latest nodejs
+  * install nrm
 - neovim
   * install neovim
   * create $HOME/.vim
