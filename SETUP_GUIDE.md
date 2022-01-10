@@ -8,7 +8,7 @@
   * install oh-my-zsh
   * enable plugins
 - tmux
-  * link .tmux.config
+  * link .tmux.conf
   * install tmux
   * install tpm
   * install plugins(prefix + I)
