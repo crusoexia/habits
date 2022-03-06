@@ -36,6 +36,7 @@ Plug 'jwhitley/vim-matchit'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vim-scripts/vim-cursorword'
 Plug 'vim-test/vim-test'
+Plug 'puremourning/vimspector'
 
 " html, javascript and css
 Plug 'mattn/emmet-vim'                            " zen coding
@@ -208,8 +209,6 @@ noremap <silent> <Leader>= :res+5<CR>
 noremap <silent> <Leader>- :res-5<CR>
 noremap <silent> <F3> :vertical:res+5<CR>
 noremap <silent> <F4> :vertical:res-5<CR>
-noremap <silent> <F5> :res+2<CR>
-noremap <silent> <F6> :res-2<CR>
 noremap <silent> <C-UP> :LargerFont<CR>
 noremap <silent> <C-DOWN> :SmallerFont<CR>
 
@@ -263,6 +262,19 @@ inoremap <C-u> <esc>viWUA
 inoremap <C-l> <esc>viWuA
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
+
+" vimspector
+nnoremap <Leader>ds :call vimspector#Launch()<CR>
+nnoremap <Leader>de :call vimspector#Reset()<CR>
+nnoremap <Leader>dc :call vimspector#Continue()<CR>
+
+nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
+nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+
+nmap <Leader>dk <Plug>VimspectorRestart
+nmap <Leader>dh <Plug>VimspectorStepOut
+nmap <Leader>dl <Plug>VimspectorStepInto
+nmap <Leader>dj <Plug>VimspectorStepOver
 
 " coc.nvim
 
