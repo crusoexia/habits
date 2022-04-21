@@ -43,8 +43,6 @@ Plug 'mattn/emmet-vim'                            " zen coding
 Plug 'elzr/vim-json'                              " json syntax high light
 Plug 'JulesWang/css.vim'                          " css syntax
 Plug 'groenewege/vim-less'                        " less syntax high light
-Plug 'pangloss/vim-javascript'                    " javascript syntax and indent
-Plug 'crusoexia/vim-javascript-lib'               " javascript library highlight
 Plug 'mustache/vim-mustache-handlebars'           " html template library high light
 Plug 'wavded/vim-stylus'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -62,6 +60,9 @@ Plug 'HerringtonDarkholme/yats.vim'
 
 " syntax highlight
 Plug 'jxnblk/vim-mdx-js'
+Plug 'neoclide/jsonc.vim'
+Plug 'pangloss/vim-javascript'                    " javascript syntax and indent
+Plug 'crusoexia/vim-javascript-lib'               " javascript library highlight
 
 " theme
 Plug 'altercation/vim-colors-solarized'
@@ -324,3 +325,4 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 
 " File type syntax mapping
 au BufRead,BufNewFile *.vue set filetype=html
+au BufRead,BufNewFile *.json set filetype=jsonc
