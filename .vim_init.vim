@@ -102,6 +102,7 @@ let g:markdown_fenced_languages = [
   \'json', 
   \'java'
 \]
+let g:markdown_syntax_conceal = 0
 let g:notes_directories = ['~/Documents/notes']
 
 " coc.vim extensions
@@ -151,7 +152,7 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-set nu					" show line number
+set nu					  " show line number
 set hidden				" can leave buffer without saving it
 set expandtab			" replace tab to spaces
 set tabstop=2			" a tab is four spaces
