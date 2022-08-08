@@ -1,0 +1,23 @@
+[user]
+	name = crusoexia
+	email = xiawenlan1984@gmail.com
+[alias]
+  conflicts = diff --name-only --diff-filter=U
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+[core]
+	editor = nvim
+	ignorecase = false
+[http]
+	postBuffer = 524288000
+[remote "origin"]
+	proxy = 
+[pull]
+	ff = only
+[url "git@github.com:"]
+	insteadOf = git://github.com/
