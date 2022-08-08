@@ -46,6 +46,10 @@ cd .vim
 ln -s "$BASEDIR/configs/.vim_init.vim" init.vim
 ln -s "$BASEDIR/configs/.vim_coc-settings.json" coc-settings.json
 
+# iterm2
+cd ~
+ln -s "$BASEDIR/configs/com.googlecode.iterm2.plist" com.googlecode.iterm2.plist
+
 # inform manual actions
 echo "Actions need manual execute:"
 echo "* enable oh-my-zsh plugins"
