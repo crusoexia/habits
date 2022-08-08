@@ -35,3 +35,5 @@
 
 ## TODO
 - [ ] automate this
+  + [x] macos
+  + [ ] ubuntu
