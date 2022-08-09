@@ -56,6 +56,8 @@ ln -s "$BASEDIR/configs/com.googlecode.iterm2.plist" com.googlecode.iterm2.plist
 
 # oh-my-zsh
 cd ~
+brew install autojump
+ln -s "$BASEDIR/configs/.zshrc" .zshrc
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # inform manual actions
