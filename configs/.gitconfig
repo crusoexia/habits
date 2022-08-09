@@ -1,6 +1,6 @@
 [user]
-	name = crusoexia
-	email = xiawenlan1984@gmail.com
+	name = Crusoe Xia
+	email = crusoe.xia@activenetwork.com
 [alias]
   conflicts = diff --name-only --diff-filter=U
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative

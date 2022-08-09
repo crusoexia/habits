@@ -35,7 +35,7 @@ cd ~
 brew install fzf
 brew install fd
 brew install ripgrep
-ln -s "$BASEDIR/configs/.fzf.config.zsh" .fzf.config.zsh
+$(brew --prefix)/opt/fzf/install
 
 # neovim
 cd ~
