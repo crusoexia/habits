@@ -35,7 +35,10 @@
   * install plugins
   * _wsl_: [How to use the Windows clipboard from WSL?](https://github.com/neovim/neovim/wiki/FAQ#how-to-use-the-windows-clipboard-from-wsl)
 
-## TODO
-- [ ] automate this
-  + [x] macos
-  + [ ] ubuntu
+## automation setup
+- macos - `setup.mac.sh`
+- ubuntu - `setup.ubuntu.sh`
+
+## V2rayN
+
+> Note: Do not put V2rayN under `Program Files` folder, it would not work properly due to some privacy issue.
