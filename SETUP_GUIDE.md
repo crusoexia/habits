@@ -1,7 +1,9 @@
 # Setup guide
 
 ## List to setup
-- _wsl_: proxy
+- _wsl_
+  * source wsl-proxy.sh for using windows system proxy(v2rayN)
+  * config windows firewall to allow the http connection between wsl and windows
 - oh-my-zsh
   * install zsh
   * set zsh as default shell
