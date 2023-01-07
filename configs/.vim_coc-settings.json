@@ -4,6 +4,8 @@
   "eslint.filetypes": [ "javascript", "javascriptreact", "typescript", "typescriptreact" ],
   "typescript.updateImportsOnFileMove.enable": false,
   "javascript.updateImportsOnFileMove.enable": false,
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "single",
   "stylelintplus.autoFixOnSave": true,
   "suggest.noselect": true
 }
