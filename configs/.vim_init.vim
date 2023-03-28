@@ -278,6 +278,11 @@ nmap <Leader>dh <Plug>VimspectorStepOut
 nmap <Leader>dl <Plug>VimspectorStepInto
 nmap <Leader>dj <Plug>VimspectorStepOver
 
+" vim-notes
+nmap <Leader>nn :Note<CR>
+nmap <Leader>nr :RecentNotes<CR>
+nmap <Leader>nd :DeleteNote<CR>
+
 " coc.nvim
 
 " Completion
