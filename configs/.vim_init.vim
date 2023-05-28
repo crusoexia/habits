@@ -265,6 +265,9 @@ inoremap <C-l> <esc>viWuA
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
 
+" spell check
+noremap <leader>sp :set spell spelllang=en_us<cr>
+
 " vimspector
 nnoremap <Leader>ds :call vimspector#Launch()<CR>
 nnoremap <Leader>de :call vimspector#Reset()<CR>
