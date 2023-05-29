@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 declare untracked_list=$(git ls-files -z -o --exclude-standard | xargs -0 -I "%" echo -e "\t%")
 
 # Do remove
