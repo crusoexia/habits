@@ -1,0 +1,13 @@
+#!/bin/bash
+
+declare untracked_list=$(git ls-files -z -o --exclude-standard | xargs -0 -I "%" echo -e "\t%")
+
+# Do remove
+# TODO: prompt to confirm removal
+[ ! -z "${untracked_list}" ] && (git ls-files -z -o --exclude-standard | xargs -0 rm)
+
+# Print result
+declare RED='\033[0;31m'
+
+echo "Untracked files removed:"
+printf "${RED}$untracked_list\n"
