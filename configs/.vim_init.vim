@@ -105,6 +105,11 @@ let g:markdown_fenced_languages = [
 let g:markdown_syntax_conceal = 0
 let g:notes_directories = ['~/Documents/notes']
 
+" vim-notes
+let g:notes_conceal_code = 0
+let g:notes_tab_indents = 0
+let g:notes_conceal_url = 0
+
 " coc.vim extensions
 let g:coc_global_extensions = [
   \'coc-stylelintplus', 
