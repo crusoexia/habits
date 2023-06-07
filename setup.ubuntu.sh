@@ -5,6 +5,11 @@ set -e
 declare HABITS_REPO=git@github.com:crusoexia/habits.git
 declare HABITS_HOME=~/habits
 
+# install zsh if it doesn't exists
+if ! command -v zsh &> /dev/null; then
+    sudo apt install zsh
+fi
+
 # check preconditions
 git --version
 zsh --version
