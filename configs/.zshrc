@@ -122,3 +122,5 @@ _fzf_compgen_dir() {
 # Volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+[ -f "/Users/cxia/.ghcup/env" ] && source "/Users/cxia/.ghcup/env" # ghcup-env

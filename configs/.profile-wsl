@@ -1,0 +1,6 @@
+source .habitsrc
+source $HABITS_HOME/config/.profile
+
+# ubuntu specific
+source /usr/share/autojump/autojump.sh
+source $HABITS_HOME/wsl-proxy.sh
