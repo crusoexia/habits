@@ -1,0 +1,2 @@
+# set wsl DNS proxy
+source "$HABITS_HOME/configs/wsl-proxy.sh"

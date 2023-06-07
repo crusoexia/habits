@@ -1,7 +1,0 @@
-source ~/habits/configs/.zshrc
-
-# ubuntu specific
-source /usr/share/autojump/autojump.sh
-source ~/habits/wsl-proxy.sh
-
-export PATH=~/.local/bin:$PATH

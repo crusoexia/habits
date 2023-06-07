@@ -8,6 +8,17 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+# setup ubuntu autojump if installed
+if [ -f "/usr/share/autojump/autojump.sh" ]; then
+    source /usr/share/autojump/autojump.sh
+fi
+
+# set wsl specific profile if .profile-wsl exists
+if [ -f "$HOME/.profile-wsl" ]; then
+    source "$HOME/.profile-wsl"
+
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default &> /dev/null || tmux new -s default
 fi
+
+export HABITS_HOME=~/habits

@@ -1,21 +1,34 @@
 #!/bin/zsh
 set -e
 
+# vars
+declare HABITS_REPO=git@github.com:crusoexia/habits.git
+declare HABITS_HOME=~/habits
+
 # check preconditions
 git --version
 zsh --version
 
-# quick access
-BASEDIR=$(cd "$(dirname "$0")"; pwd -P)
-
-# git
+# clone habits
 cd ~
-ln -s "$BASEDIR/configs/.gitconfig" .gitconfig
+git clone "$HABITS_REPO" "$HABITS_HOME"
+
+# git global config
+cd ~
+ln -s "$HABITS_HOME/configs/.gitconfig" .gitconfig
+
+# shell global config
+cd ~
+rm .profile
+ln -s "$HABITS_HOME/configs/.profile" .profile
+ln -s "$HABITS_HOME/configs/.profile-wsl" .profile-wsl
+ln -s "$HABITS_HOME/configs/.zprofile" .zprofile
+ln -s "$HABITS_HOME/configs/.zshrc" .zshrc
 
 # tmux
 cd ~
 sudo apt install tmux
-ln -s "$BASEDIR/configs/.tmux.conf" .tmux.conf
+ln -s "$HABITS_HOME/configs/.tmux.conf" .tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # nodejs
@@ -45,8 +58,8 @@ sudo apt install python3-neovim
 python3 -m pip install --user --upgrade pynvim # enable python plugins
 rm -rf .vim && mkdir .vim
 cd .vim
-ln -s "$BASEDIR/configs/.vim_init.vim" init.vim
-ln -s "$BASEDIR/configs/.vim_coc-settings.json" coc-settings.json
+ln -s "$HABITS_HOME/configs/.vim_init.vim" init.vim
+ln -s "$HABITS_HOME/configs/.vim_coc-settings.json" coc-settings.json
 mkdir ~/.config && cd ~/.config
 ln -s "$HOME/.vim" nvim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -56,7 +69,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 cd ~
 sudo apt install zsh
 sudo apt install autojump
-ln -s "$BASEDIR/configs/.zshrc-ubuntu" .zshrc
+ln -s "$HABITS_HOME/configs/.zshrc-ubuntu" .zshrc
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # inform manual actions
