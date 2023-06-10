@@ -5,6 +5,7 @@
   * source wsl-proxy.sh for using windows system proxy(v2rayN)
   * config windows firewall to allow the http connection between wsl and windows
   * install `win32yank` (accessable through `PATH`)
+  * install `wslu`
 - oh-my-zsh
   * install zsh
   * set zsh as default shell
