@@ -8,5 +8,5 @@ My terminal habits.
 **ubuntu**
 
 ```sh
-curl https://raw.githubusercontent.com/crusoexia/habits/master/setup.ubuntu.sh | bash
+git clone git@github.com:crusoexia/habits.git ~/habits && ./habits/setup.ubuntu.sh
 ```

@@ -7,7 +7,7 @@ declare HABITS_REPO=git@github.com:crusoexia/habits.git
 declare HABITS_HOME=~/habits
 
 # update apt
-sudo apt update -y
+sudo apt -y update
 
 # install zsh if it doesn't exists
 if ! command -v zsh &> /dev/null; then
@@ -16,17 +16,12 @@ if ! command -v zsh &> /dev/null; then
 fi
 
 # check preconditions
-git --version > /dev/null
-zsh --version > /dev/null
-
-# clone habits
-cd ~
-rm -rf "$HABITS_HOME" &> /dev/null
-git clone "$HABITS_REPO" "$HABITS_HOME"
+git --version
+zsh --version
 
 # git global config
 cd ~
-rm .gitconfig &> /dev/null
+rm -f .gitconfig
 ln -s "$HABITS_HOME/configs/.gitconfig" .gitconfig
 
 # tmux
@@ -71,7 +66,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # oh-my-zsh
 cd ~
 sudo apt install -y autojump
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # global configs
 cd ~
