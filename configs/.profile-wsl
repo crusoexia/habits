@@ -1,2 +1,7 @@
 # set wsl DNS proxy
 source "$HABITS_HOME/configs/wsl-proxy.sh"
+
+# wslu
+alias open="$(which wslview)"
+alias clipc="$(which clipcopy)"
+alias clipp="$(which clippaste)"
