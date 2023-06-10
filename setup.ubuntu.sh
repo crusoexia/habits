@@ -53,7 +53,7 @@ cd ~
 sudo apt install -y neovim
 sudo apt install -y python3-neovim
 python3 -m pip install --user --upgrade pynvim # enable python plugins
-rm -rf .vim &> /dev/null
+rm -rf .vim
 mkdir .vim
 cd .vim
 ln -s "$HABITS_HOME/configs/.vim_init.vim" init.vim
@@ -70,20 +70,24 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # global configs
 cd ~
-rm .profile .zshrc
+rm -f .profile .zshrc
 ln -s "$HABITS_HOME/configs/.profile" .profile
 ln -s "$HABITS_HOME/configs/.profile-wsl" .profile-wsl
 ln -s "$HABITS_HOME/configs/.zprofile" .zprofile
 ln -s "$HABITS_HOME/configs/.zshrc" .zshrc
-ln -s "$HABITS_REPO/configs/.npmrc" .npmrc
+ln -s "$HABITS_HOME/configs/.npmrc" .npmrc
 
 # bins
 cd ~
 ln -s "$HABITS_HOME/bin" bin
 
 # inform manual actions
-echo ""
+echo "*********************************"
 echo "Actions need manual execute:"
 echo "* install nodejs"
 echo "* install tmux plugin(prefix + I)"
 echo "* install vim plugins"
+echo "*********************************"
+echo ""
+echo " * Happy hacking! * "
+echo ""

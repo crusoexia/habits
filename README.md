@@ -10,3 +10,5 @@ My terminal habits.
 ```sh
 git clone git@github.com:crusoexia/habits.git ~/habits && ./habits/setup.ubuntu.sh
 ```
+
+> For wsl, remember to config the [proxy](./configs/wsl-proxy.sh) first.
