@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e -o pipeline
+set -e
 
 # vars
 declare HABITS_REPO=git@github.com:crusoexia/habits.git
