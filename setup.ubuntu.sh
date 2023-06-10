@@ -6,6 +6,9 @@ set -e
 declare HABITS_REPO=git@github.com:crusoexia/habits.git
 declare HABITS_HOME=~/habits
 
+# update apt
+sudo apt update -y
+
 # install zsh if it doesn't exists
 if ! command -v zsh &> /dev/null; then
     sudo apt install -y zsh
@@ -18,10 +21,12 @@ zsh --version > /dev/null
 
 # clone habits
 cd ~
+rm -rf "$HABITS_HOME" &> /dev/null
 git clone "$HABITS_REPO" "$HABITS_HOME"
 
 # git global config
 cd ~
+rm .gitconfig &> /dev/null
 ln -s "$HABITS_HOME/configs/.gitconfig" .gitconfig
 
 # tmux
@@ -53,7 +58,8 @@ cd ~
 sudo apt install -y neovim
 sudo apt install -y python3-neovim
 python3 -m pip install --user --upgrade pynvim # enable python plugins
-rm -rf .vim && mkdir .vim
+rm -rf .vim &> /dev/null
+mkdir .vim
 cd .vim
 ln -s "$HABITS_HOME/configs/.vim_init.vim" init.vim
 ln -s "$HABITS_HOME/configs/.vim_coc-settings.json" coc-settings.json
