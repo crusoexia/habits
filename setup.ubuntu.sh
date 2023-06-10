@@ -1,5 +1,6 @@
-#!/bin/zsh
-set -e
+#!/bin/bash
+
+set -e -o pipeline
 
 # vars
 declare HABITS_REPO=git@github.com:crusoexia/habits.git
@@ -7,12 +8,13 @@ declare HABITS_HOME=~/habits
 
 # install zsh if it doesn't exists
 if ! command -v zsh &> /dev/null; then
-    sudo apt install zsh
+    sudo apt install -y zsh
+    source ~/.bashrc
 fi
 
 # check preconditions
-git --version
-zsh --version
+git --version > /dev/null
+zsh --version > /dev/null
 
 # clone habits
 cd ~
@@ -22,44 +24,34 @@ git clone "$HABITS_REPO" "$HABITS_HOME"
 cd ~
 ln -s "$HABITS_HOME/configs/.gitconfig" .gitconfig
 
-# shell global config
-cd ~
-rm .profile
-ln -s "$HABITS_HOME/configs/.profile" .profile
-ln -s "$HABITS_HOME/configs/.profile-wsl" .profile-wsl
-ln -s "$HABITS_HOME/configs/.zprofile" .zprofile
-ln -s "$HABITS_HOME/configs/.zshrc" .zshrc
-
 # tmux
 cd ~
-sudo apt install tmux
+sudo apt install -y tmux
 ln -s "$HABITS_HOME/configs/.tmux.conf" .tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # nodejs
 cd ~
-curl https://get.volta.sh | bash
-source ~/.bashrc
-volta install node
+sh -c 'curl https://get.volta.sh | bash' || true
 
 # fzf
 cd ~
-sudo apt install fzf
-sudo apt install ripgrep
+sudo apt install -y fzf
+sudo apt install -y ripgrep
 
-sudo apt install fd-find
+sudo apt install -y fd-find
 source ~/.bashrc
 mkdir -p ~/.local/bin
 ln -s $(which fdfind) ~/.local/bin/fd
 
 # python3
-sudo apt install python3-pip
+sudo apt install -y python3-pip
 source ~/.bashrc
 
 # neovim
 cd ~
-sudo apt install neovim
-sudo apt install python3-neovim
+sudo apt install -y neovim
+sudo apt install -y python3-neovim
 python3 -m pip install --user --upgrade pynvim # enable python plugins
 rm -rf .vim && mkdir .vim
 cd .vim
@@ -72,14 +64,25 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # oh-my-zsh
 cd ~
-sudo apt install zsh
-sudo apt install autojump
-ln -s "$HABITS_HOME/configs/.zshrc-ubuntu" .zshrc
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo apt install -y autojump
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
+
+# global configs
+cd ~
+rm .profile .zshrc
+ln -s "$HABITS_HOME/configs/.profile" .profile
+ln -s "$HABITS_HOME/configs/.profile-wsl" .profile-wsl
+ln -s "$HABITS_HOME/configs/.zprofile" .zprofile
+ln -s "$HABITS_HOME/configs/.zshrc" .zshrc
+ln -s "$HABITS_REPO/configs/.npmrc" .npmrc
+
+# bins
+cd ~
+ln -s "$HABITS_HOME/bin" bin
 
 # inform manual actions
 echo ""
 echo "Actions need manual execute:"
-echo "* enable oh-my-zsh plugins"
+echo "* install nodejs"
 echo "* install tmux plugin(prefix + I)"
 echo "* install vim plugins"
