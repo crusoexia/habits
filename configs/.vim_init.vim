@@ -103,7 +103,7 @@ let g:markdown_fenced_languages = [
   \'java'
 \]
 let g:markdown_syntax_conceal = 0
-let g:notes_directories = ['~/Documents/notes']
+let g:notes_directories = ['$VNOTE_HOME']
 
 " vim-notes
 let g:notes_conceal_code = 0
