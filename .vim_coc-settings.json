@@ -1,8 +1,0 @@
-{
-  "coc.preferences.colorSupport": true,
-  "coc.preferences.extensionUpdateCheck": "never",
-  "eslint.filetypes": [ "javascript", "javascriptreact", "typescript", "typescriptreact" ],
-  "typescript.updateImportsOnFileMove.enable": false,
-  "javascript.updateImportsOnFileMove.enable": false,
-  "stylelintplus.autoFixOnSave": true
-}
