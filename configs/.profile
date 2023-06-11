@@ -16,7 +16,7 @@ if [ -f "/usr/share/autojump/autojump.sh" ]; then
 fi
 
 # set wsl specific profile if .profile-wsl exists
-if [ -f "$HOME/.profile-wsl" ]; then
+if [ -e "$HOME/.profile-wsl" ]; then
     source "$HOME/.profile-wsl"
 fi
 

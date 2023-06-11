@@ -1,0 +1,9 @@
+# wslu
+alias open="$(which wslview)"
+alias clipc="$(which clipcopy)"
+alias clipp="$(which clippaste)"
+
+# fix oh-my-zsh web-search
+source ~/habits/lib/override-omz-functions.zsh
+unset -f web_search
+source $ZSH/plugins/web-search/web-search.plugin.zsh

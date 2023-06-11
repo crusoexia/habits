@@ -75,6 +75,7 @@ ln -s "$HABITS_HOME/configs/.profile" .profile
 ln -s "$HABITS_HOME/configs/.profile-wsl" .profile-wsl
 ln -s "$HABITS_HOME/configs/.zprofile" .zprofile
 ln -s "$HABITS_HOME/configs/.zshrc" .zshrc
+ln -s "$HABITS_HOME/configs/.zshrc-wsl" .zshrc-wsl
 ln -s "$HABITS_HOME/configs/.npmrc" .npmrc
 
 # bins

@@ -2,9 +2,4 @@
 source "$HABITS_HOME/configs/wsl-proxy.sh"
 
 # vim-notes directory
-export VNOTE_HOME="~/OneDrive/documents/notes"
-
-# wslu
-alias open="$(which wslview)"
-alias clipc="$(which clipcopy)"
-alias clipp="$(which clippaste)"
+export VNOTE_HOME="$HOME/OneDrive/documents/notes"

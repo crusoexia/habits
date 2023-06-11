@@ -70,12 +70,17 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode autojump)
+plugins=(git vi-mode autojump web-search)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-alias vi="/opt/homebrew/bin/nvim"
+if [ -e "$HOME/.zshrc-wsl" ]; then
+  source "$HOME/.zshrc-wsl"
+fi
+
+# alias
+alias vi="$(which nvim)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
