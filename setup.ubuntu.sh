@@ -27,6 +27,7 @@ ln -s "$HABITS_HOME/configs/.gitconfig" .gitconfig
 # tmux
 cd ~
 sudo apt install -y tmux
+sudo apt install -y tmuxinator
 ln -s "$HABITS_HOME/configs/.tmux.conf" .tmux.conf
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
