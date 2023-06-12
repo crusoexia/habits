@@ -24,5 +24,8 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux attach -t default &> /dev/null || tmux new -s default
 fi
 
+# vim-notes directory
+export VNOTE_HOME="$HOME/OneDrive/documents/notes"
+
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"

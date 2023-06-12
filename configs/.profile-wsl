@@ -1,5 +1,2 @@
 # set wsl DNS proxy
 source "$HABITS_HOME/configs/wsl-proxy.sh"
-
-# vim-notes directory
-export VNOTE_HOME="$HOME/OneDrive/documents/notes"
