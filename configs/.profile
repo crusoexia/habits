@@ -20,8 +20,8 @@ if [ -e "$HOME/.profile-wsl" ]; then
     source "$HOME/.profile-wsl"
 fi
 
-if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t default &> /dev/null || tmux new -s default
+if command -v tmuxinator &> /dev/null && [ -z "$TMUX" ]; then
+    tmuxinator start default
 fi
 
 # vim-notes directory
