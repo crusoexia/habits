@@ -83,6 +83,7 @@ fi
 alias vi="$(which nvim)"
 alias bingtr="bing translate"
 alias bingdc="bing dictionary"
+alias tt="tmuxinator"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
