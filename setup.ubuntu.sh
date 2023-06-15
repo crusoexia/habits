@@ -83,6 +83,9 @@ ln -s "$HABITS_HOME/configs/.npmrc" .npmrc
 cd ~
 ln -s "$HABITS_HOME/bin" bin
 
+# daily programs
+sudo apt install -y dict
+
 # inform manual actions
 echo "*********************************"
 echo "Actions need manual execute:"
