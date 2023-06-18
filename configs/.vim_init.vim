@@ -351,6 +351,19 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 
 " end coc.nvim
 
+" Abbreviation
+" insert date - short format. 
+" Usage: "=dates<C-]>
+cabbrev dates strftime("%m/%d/%Y")<C-M>pa<space> 
+
+" commands
+" Add `:Ndate` command for vim-notes
+autocmd FileType notes command! -nargs=0 Ndate 
+  \ exe 'normal G' 
+  \ | call append(line("."),   repeat([""], v:count1)) 
+  \ | exe 'normal G' 
+  \ | r !echo "\# $(date +\%m/\%d/\%Y)"
+
 " File type syntax mapping
 au BufRead,BufNewFile *.vue set filetype=html
 au BufRead,BufNewFile *.json set filetype=jsonc
