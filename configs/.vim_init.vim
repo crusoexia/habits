@@ -103,12 +103,12 @@ let g:markdown_fenced_languages = [
   \'java'
 \]
 let g:markdown_syntax_conceal = 0
-let g:notes_directories = ['$VNOTE_HOME']
 
 " vim-notes
 let g:notes_conceal_code = 0
 let g:notes_tab_indents = 0
 let g:notes_conceal_url = 0
+let g:notes_directories = ['$VNOTE_HOME']
 
 " coc.vim extensions
 let g:coc_global_extensions = [
@@ -354,7 +354,9 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 " Abbreviation
 " insert date - short format. 
 " Usage: "=dates<C-]>
-cabbrev dates strftime("%m/%d/%Y")<C-M>pa<space> 
+cabbrev abds strftime("%m/%d/%Y")<C-M>pa<space> 
+iabbrev abds <C-R>=strftime("%m/%d/%Y")<C-M>
+iabbrev abdiso <C-R>=strftime("%Y-%m-%d")<C-M>
 
 " commands
 " Add `:Ndate` command for vim-notes
