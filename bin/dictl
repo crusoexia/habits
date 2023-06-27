@@ -1,0 +1,4 @@
+#!/bin/bash
+
+declare word=$1
+dict "$word" | less
