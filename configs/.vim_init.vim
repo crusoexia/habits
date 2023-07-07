@@ -354,9 +354,9 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 " Abbreviation
 " insert date - short format. 
 " Usage: "=dates<C-]>
-cabbrev abds strftime("%m/%d/%Y")<C-M>pa<space> 
-iabbrev abds <C-R>=strftime("%m/%d/%Y")<C-M>
-iabbrev abdiso <C-R>=strftime("%Y-%m-%d")<C-M>
+cabbrev abdates strftime("%m/%d/%Y")<C-M>pa<space> 
+iabbrev abdates <C-R>=strftime("%m/%d/%Y")<C-M>
+iabbrev abdateiso <C-R>=strftime("%Y-%m-%d")<C-M>
 
 " commands
 " Add `:Ndate` command for vim-notes
