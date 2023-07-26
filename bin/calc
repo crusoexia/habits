@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+declare exp=$1
+
+bc <<<"$exp"
