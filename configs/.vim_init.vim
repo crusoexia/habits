@@ -103,6 +103,7 @@ let g:markdown_fenced_languages = [
   \'java'
 \]
 let g:markdown_syntax_conceal = 0
+let g:markdown_folding = 1
 
 " vim-notes
 let g:notes_conceal_code = 0
