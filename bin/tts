@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+# vvvvvvvvvvvvvvvvvvv 
+# Reference of mixing the position arguments with options:
+# https://gist.github.com/caruccio/836c2dda2bdfa5666c5f9b0230978f26
+#
+# TODO:
+# * help option - h
+# vvvvvvvvvvvvvvvvvvv
+
+shift $((OPTIND - 1))
+template=$1
+shift
+
+while getopts ':p:' OPTION
+do
+  case "${OPTION}" in
+    p) project=${OPTARG};;
+   \?) echo "$0: Error: Invalid option: -${OPTARG}" >&2; exit 1;;
+    :) echo "$0: Error: option -${OPTARG} requires an argument" >&2; exit 1;;
+  esac
+done
+
+tmuxinator start $template p=$project -n $project
