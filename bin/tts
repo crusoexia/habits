@@ -1,24 +1,46 @@
 #!/usr/bin/env bash
 
-# vvvvvvvvvvvvvvvvvvv 
-# Reference of mixing the position arguments with options:
-# https://gist.github.com/caruccio/836c2dda2bdfa5666c5f9b0230978f26
-#
-# TODO:
-# * help option - h
-# vvvvvvvvvvvvvvvvvvv
+display_help() {
+   echo "Short term of \"tmuxinator start\"."
+   echo
+   echo "Usage: tts [template-name -p project-name|-h]"
+   echo "options:"
+   echo "p     Project name."
+   echo "h     Print help."
+   echo
+   echo "Example:"
+   echo "tts coding -p habits"
+   echo
+}
 
-shift $((OPTIND - 1))
-template=$1
-shift
+terminate_by_invalid_usage() {
+  echo "Error: type \"tts -h\" to check the usage."
+  exit 1
+}
 
-while getopts ':p:' OPTION
+# Main program
+
+[[ 0 -eq $# ]] && terminate_by_invalid_usage
+
+# Pick "Session Template" argument
+if [[ ! "$1" =~ ^\-. ]]; then
+  template=$1
+  # Remove position argument from argument list for later options parsing.
+  # See: https://gist.github.com/caruccio/836c2dda2bdfa5666c5f9b0230978f26
+  shift
+fi
+
+# Parse options
+while getopts ':p:h' OPTION
 do
   case "${OPTION}" in
     p) project=${OPTARG};;
+    h) display_help; exit;;
    \?) echo "$0: Error: Invalid option: -${OPTARG}" >&2; exit 1;;
     :) echo "$0: Error: option -${OPTARG} requires an argument" >&2; exit 1;;
   esac
 done
+
+[[ 0 -eq ${#template} ]] && terminate_by_invalid_usage
 
 tmuxinator start $template p=$project -n $project
