@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+line=$1
+file=$2
+
+awk "NR==$line {print; exit;}" $file
