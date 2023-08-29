@@ -27,7 +27,7 @@ fi
 # vim-notes directory
 export VNOTE_HOME="$HOME/OneDrive/documents/notes"
 
-export EDITOR="vim"
+export EDITOR="vi"
 
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"

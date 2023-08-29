@@ -80,7 +80,7 @@ if [ -e "$HOME/.zshrc-wsl" ]; then
 fi
 
 # alias
-alias vi="$(which vim)"
+alias vi="$(which nvim)"
 alias bingtr="bing translate"
 alias bingdc="bing dictionary"
 alias tt="tmuxinator"
