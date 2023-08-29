@@ -77,8 +77,8 @@ Plug 'sjl/badwolf'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 
-" Browser nvim extension support
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+" Browser neovim extension support
+"Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 call plug#end()
 
@@ -146,12 +146,21 @@ endif
 colorscheme monokai
 let &colorcolumn=join(range(121,121),",")
 
-" Text editor
-"if has("gui_macvim") || has("win32") || has("win16") " make clipboard the default copy/paste buffer
-	"set clipboard=unnamed
-"else 
-	"set clipboard=unnamedplus	
-"endif
+" Cursor sharp in normal/insert mode
+" Reference chart of values:
+"   Ps = 0  -> blinking block.
+"   Ps = 1  -> blinking block (default).
+"   Ps = 2  -> steady block.
+"   Ps = 3  -> blinking underline.
+"   Ps = 4  -> steady underline.
+"   Ps = 5  -> blinking bar (xterm).
+"   Ps = 6  -> steady bar (xterm)."
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+" CursorLine to distinct normal/insert mode
+autocmd InsertEnter * set nocursorline
+autocmd InsertLeave * set cursorline
 
 " Backup files strategy
 set nobackup
@@ -186,6 +195,11 @@ set guioptions-=L       " hide left hand scrollbar when split window
 set guioptions-=b       " hide bottom scrollbar
 set completeopt-=preview
 
+" vim / neovim
+if !has('nvim')
+  set noesckeys         " remove the latency of pressing <ESC> in insert mode. see ':h noesckeys'
+endif
+
 " recommoned by coc.vim
 set cmdheight=2   " better display for messages
 set updatetime=300
@@ -201,13 +215,13 @@ set nofoldenable
 
 " Statusline
 
-:set statusline=%f         " Path to the file
-:set statusline+=%=         " Switch to the right side
-:set statusline+=[
-:set statusline+=%1*%M%*%n%R%Y
-:set statusline+=,%{&fileencoding?&fileencoding:&encoding}
-:set statusline+=]\ 
-:set statusline+=%-19(%3l/%L,\ %02c%)
+set statusline=%f           " Path to the file
+set statusline+=%=          " Switch to the right side
+set statusline+=[
+set statusline+=%1*%M%*%n%R%Y
+set statusline+=,%{&fileencoding?&fileencoding:&encoding}
+set statusline+=]\ 
+set statusline+=%-19(%3l/%L,\ %02c%)
 
 " Key maps
 let mapleader=" "
