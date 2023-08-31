@@ -235,14 +235,8 @@ noremap <silent> <C-UP> :LargerFont<CR>
 noremap <silent> <C-DOWN> :SmallerFont<CR>
 
 " window nav
-tnoremap <m-h> <C-\><C-N><C-w>h
-tnoremap <m-j> <C-\><C-N><C-w>j
-tnoremap <m-k> <C-\><C-N><C-w>k
-tnoremap <m-l> <C-\><C-N><C-w>l
-"nnoremap <C-h> <C-w>h
-"nnoremap <C-j> <C-w>j
-"nnoremap <C-k> <C-w>k
-"nnoremap <C-l> <C-w>l
+" Now I'm using christoomey/vim-tmux-navigator, don't need additional key
+" mapping for this task.
 
 " buffer operation
 nnoremap <silent> <Leader>bd :bd *<C-a><CR>
