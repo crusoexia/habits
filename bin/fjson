@@ -1,22 +1,52 @@
 #!/usr/bin/env node
-const { argv } = require('node:process');
 
-(function main() {
-  const input = argv[2];
+/**
+ * TODO: help option
+* */
 
-  if (!input) {
-    return;
-  }
+const { argv, stdin } = require('node:process');
+const { createInterface } = require('node:readline/promises');
 
+function hasPositionedArgv() {
+  return argv.length > 2;
+}
+
+function prettyPrint(json) {
   try {
     console.log(
       JSON.stringify(
-        JSON.parse(input), 
+        JSON.parse(json), 
         null, 
         2,
       ),
     );
   } catch {
-    console.error('Invalid JSON format');
+    console.error('Invalid JSON:', json);
   }
-}());
+}
+
+async function tryToReadStdin() {
+  const readline = createInterface({ input: stdin });
+  let hasInput = false;
+
+  readline.on('line', (input) => {
+    hasInput = true;
+    prettyPrint(input);
+  });
+
+  setTimeout(() => {
+    !hasInput && readline.close();
+  }, 100);
+}
+
+function handleArgv() {
+  prettyPrint(argv[2]);
+}
+
+(function main() {
+  if (hasPositionedArgv()) {
+    handleArgv();
+  } else {
+    tryToReadStdin();
+  }
+})();
