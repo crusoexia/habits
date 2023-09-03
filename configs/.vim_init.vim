@@ -378,3 +378,12 @@ autocmd FileType notes command! -nargs=0 Ndate
 " File type syntax mapping
 au BufRead,BufNewFile *.vue set filetype=html
 au BufRead,BufNewFile *.json set filetype=jsonc
+
+" System-specific
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+
+call SourceIfExists("~/.vim/.vimrc_local")

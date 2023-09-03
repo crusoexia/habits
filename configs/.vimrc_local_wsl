@@ -1,0 +1,2 @@
+" Enable `gx` to open URL in browser in wsl
+let g:netrw_browsex_viewer="cmd.exe /C start"
