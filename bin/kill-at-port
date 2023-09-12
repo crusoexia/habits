@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+declare port=$1
+
+process-at-port $port | awk '{print $2}' | xargs -I % kill -SIGTERM %

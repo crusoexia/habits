@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+declare port=$1
+
+lsof -i -P -n | grep LISTEN | grep $port
