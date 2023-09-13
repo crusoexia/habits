@@ -235,7 +235,7 @@ noremap <silent> <C-UP> :LargerFont<CR>
 noremap <silent> <C-DOWN> :SmallerFont<CR>
 
 " window nav
-" Now I'm using christoomey/vim-tmux-navigator, don't need additional key
+" Now I'm using christoomey/vim-tmux-navigator
 " mapping for this task.
 
 " buffer operation
@@ -250,8 +250,13 @@ nnoremap <silent> <Leader>t :tabnew<CR>:term<CR>i
 nnoremap <silent> <Leader>vt :vnew<CR>:b#<CR><C-w>l:term<CR>i
 nnoremap <silent> <Leader>ht :new<CR>:b#<CR><C-w>j:term<CR>i
 
-" terminal mode mapping
+" terminal mode nav
 tnoremap <Esc><Esc> <C-\><C-n>
+tnoremap <C-h> <C-\><C-N><C-w>h
+tnoremap <C-j> <C-\><C-N><C-w>j
+tnoremap <C-k> <C-\><C-N><C-w>k
+tnoremap <C-l> <C-\><C-N><C-w>l
+
 
 
 " fold operation
