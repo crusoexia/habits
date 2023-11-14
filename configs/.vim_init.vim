@@ -8,7 +8,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'jiangmiao/auto-pairs'
-Plug 'crusoexia/gtk2-vim-zoom'
 Plug 'wesQ3/vim-windowswap'
 Plug 'tpope/vim-eunuch'
 Plug 'godlygeek/tabular'
