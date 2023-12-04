@@ -298,6 +298,9 @@ nmap <Leader>nn :Note<CR>
 nmap <Leader>nr :RecentNotes<CR>
 nmap <Leader>nd :DeleteNote<CR>
 
+" dict
+:nnoremap <Leader>d :!dict <C-r>=expand("<cword>")<CR><CR>
+
 " coc.nvim
 
 " Completion
