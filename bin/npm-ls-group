@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+declare package=$1
+
+npm ls $package | grep -Eo "\s$package[^ ]*" | sort | uniq
