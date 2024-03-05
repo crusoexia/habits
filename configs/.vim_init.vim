@@ -116,7 +116,6 @@ let g:coc_global_extensions = [
   \'coc-html', 
   \'coc-highlight', 
   \'coc-eslint', 
-  \'coc-yaml', 
   \'coc-tsserver', 
   \'coc-svg', 
   \'coc-json', 
@@ -193,6 +192,7 @@ set guioptions-=l       " hide left hand scrollbar
 set guioptions-=L       " hide left hand scrollbar when split window
 set guioptions-=b       " hide bottom scrollbar
 set completeopt-=preview
+set encoding=UTF-8
 
 " vim / neovim
 if !has('nvim')
