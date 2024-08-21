@@ -29,7 +29,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'kannokanno/previm'
 
 " coding
-Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'jwhitley/vim-matchit'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -338,17 +337,6 @@ inoremap <nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(
 " Lint nav
 nmap <silent> ∆ <Plug>(coc-diagnostic-next)
 nmap <silent> ˚ <Plug>(coc-diagnostic-prev)
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call ShowDocumentation()<CR>
-
-function! ShowDocumentation()
-  if CocAction('hasProvider', 'hover')
-    call CocActionAsync('doHover')
-  else
-    call feedkeys('K', 'in')
-  endif
-endfunction
 
 " Highlight symbol under cursor on CursorHold
 " autocmd CursorHold * silent call CocActionAsync('highlight')
