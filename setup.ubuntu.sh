@@ -51,9 +51,15 @@ source ~/.bashrc
 
 # neovim
 cd ~
-sudo apt install -y neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+sudo ln -s /opt/nvim-linux64/bin/nvim  /usr/bin/nvim
+rm -rf nvim-linux64.tar.gz
+
 sudo apt install -y python3-neovim
 python3 -m pip install --user --upgrade pynvim # enable python plugins
+
 rm -rf .vim
 mkdir .vim
 cd .vim
@@ -86,12 +92,17 @@ ln -s "$HABITS_HOME/bin" bin
 # daily programs
 sudo apt install -y dict
 
+# switch default shell to zsh
+sudo chsh -s $(which zsh)
+
 # inform manual actions
+echo ""
 echo "*********************************"
 echo "Actions need manual execute:"
 echo "* install nodejs"
 echo "* install tmux plugin(prefix + I)"
 echo "* install vim plugins"
+echo "* ln -s ~/onedrive/config/tmuxinator .config/"
 echo "*********************************"
 echo ""
 echo " * Happy hacking! * "
