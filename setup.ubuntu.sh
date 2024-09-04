@@ -92,7 +92,11 @@ ln -s "$HABITS_HOME/bin" bin
 # daily programs
 sudo apt install -y dict
 
+# switch default shell to zsh
+sudo chsh -s $(which zsh)
+
 # inform manual actions
+echo ""
 echo "*********************************"
 echo "Actions need manual execute:"
 echo "* install nodejs"
