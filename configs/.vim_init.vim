@@ -36,27 +36,23 @@ Plug 'vim-scripts/vim-cursorword'
 Plug 'vim-test/vim-test'
 Plug 'puremourning/vimspector'
 
-" html, javascript and css
+" language specific
 Plug 'mattn/emmet-vim'                            " zen coding
+Plug 'wavded/vim-stylus'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'moll/vim-node'
+
+" language highlight group
 Plug 'elzr/vim-json'                              " json syntax high light
 Plug 'JulesWang/css.vim'                          " css syntax
 Plug 'groenewege/vim-less'                        " less syntax high light
 Plug 'mustache/vim-mustache-handlebars'           " html template library high light
-Plug 'wavded/vim-stylus'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'othree/html5.vim'
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
-
-" nodejs
-Plug 'moll/vim-node'
-
-" typescript
 "Plug 'leafgarland/typescript-vim'
 Plug 'HerringtonDarkholme/yats.vim'
 "Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
-
-" syntax highlight
 Plug 'jxnblk/vim-mdx-js'
 Plug 'neoclide/jsonc.vim'
 Plug 'pangloss/vim-javascript'                    " javascript syntax and indent
