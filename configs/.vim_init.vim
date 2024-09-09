@@ -44,19 +44,21 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'moll/vim-node'
 
 " language highlight group
-Plug 'elzr/vim-json'                              " json syntax high light
-Plug 'JulesWang/css.vim'                          " css syntax
-Plug 'groenewege/vim-less'                        " less syntax high light
-Plug 'mustache/vim-mustache-handlebars'           " html template library high light
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'othree/html5.vim'
-"Plug 'leafgarland/typescript-vim'
-Plug 'HerringtonDarkholme/yats.vim'
-"Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
-Plug 'jxnblk/vim-mdx-js'
-Plug 'neoclide/jsonc.vim'
-Plug 'pangloss/vim-javascript'                    " javascript syntax and indent
-Plug 'crusoexia/vim-javascript-lib'               " javascript library highlight
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+"Plug 'elzr/vim-json'                              " json syntax high light
+"Plug 'JulesWang/css.vim'                          " css syntax
+"Plug 'groenewege/vim-less'                        " less syntax high light
+"Plug 'mustache/vim-mustache-handlebars'           " html template library high light
+"Plug 'maxmellon/vim-jsx-pretty'
+"Plug 'othree/html5.vim'
+""Plug 'leafgarland/typescript-vim'
+"Plug 'HerringtonDarkholme/yats.vim'
+""Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
+"Plug 'jxnblk/vim-mdx-js'
+"Plug 'neoclide/jsonc.vim'
+"Plug 'pangloss/vim-javascript'                    " javascript syntax and indent
+"Plug 'crusoexia/vim-javascript-lib'               " javascript library highlight
 
 " theme
 Plug 'altercation/vim-colors-solarized'
