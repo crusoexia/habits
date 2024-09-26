@@ -55,10 +55,10 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 ""Plug 'leafgarland/typescript-vim'
 "Plug 'HerringtonDarkholme/yats.vim'
 ""Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
-"Plug 'jxnblk/vim-mdx-js'
+Plug 'jxnblk/vim-mdx-js'
 "Plug 'neoclide/jsonc.vim'
 "Plug 'pangloss/vim-javascript'                    " javascript syntax and indent
-"Plug 'crusoexia/vim-javascript-lib'               " javascript library highlight
+Plug 'crusoexia/vim-javascript-lib'               " javascript library highlight
 
 " theme
 Plug 'altercation/vim-colors-solarized'
