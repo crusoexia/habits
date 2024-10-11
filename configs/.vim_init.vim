@@ -223,8 +223,8 @@ set statusline+=%-19(%3l/%L,\ %02c%)
 let mapleader=" "
 
 " window size
-noremap <silent> <Leader>= :res+5<CR>
-noremap <silent> <Leader>- :res-5<CR>
+noremap <silent> + :res+5<CR>
+noremap <silent> _ :res-5<CR>
 noremap <silent> <F3> :vertical:res+5<CR>
 noremap <silent> <F4> :vertical:res-5<CR>
 noremap <silent> <C-UP> :LargerFont<CR>
