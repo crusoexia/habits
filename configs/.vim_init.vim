@@ -107,6 +107,20 @@ let g:notes_tab_indents = 0
 let g:notes_conceal_url = 0
 let g:notes_directories = ['$VNOTE_HOME']
 
+" treesitter
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplicate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = false,
+  },
+}
+EOF
+
 " coc.vim extensions
 let g:coc_global_extensions = [
   \'coc-stylelintplus', 
