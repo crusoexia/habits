@@ -1,6 +1,6 @@
 [user]
-	name = Crusoe Xia
-	email = crusoe.xia@activenetwork.com
+	name = crusoexia
+	email = xiawenlan1984@gmail.com
 [alias]
   conflicts = diff --name-only --diff-filter=U
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -15,9 +15,7 @@
 	ignorecase = false
 [http]
 	postBuffer = 524288000
-[remote "origin"]
-	proxy = 
 [pull]
 	ff = only
-[url "git@github.com:"]
- insteadOf = https://github.com/
+[credential]
+	helper = store
