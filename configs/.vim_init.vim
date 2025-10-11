@@ -36,6 +36,9 @@ Plug 'vim-scripts/vim-cursorword'
 Plug 'vim-test/vim-test'
 Plug 'puremourning/vimspector'
 
+" AI
+"Plug 'github/copilot.vim'
+
 " language specific
 Plug 'mattn/emmet-vim'                            " zen coding
 Plug 'wavded/vim-stylus'
@@ -195,7 +198,7 @@ set incsearch			" show search matches as you type
 set history=1000		" remember more commands and search history
 set undolevels=1000		" use many muchos levels of undo
 set title				" change the terminal's title
-set pastetoggle=<F5>	" toggle paste mode
+"set pastetoggle=<F5>  " toggle paste mode. It doesn't work in neovim
 set cursorline			" highlight current line
 set guioptions-=r       " hide right hand scrollbar
 set guioptions-=R       " hide right hand scrollbar when split window
