@@ -208,6 +208,9 @@ set guioptions-=b       " hide bottom scrollbar
 set completeopt-=preview
 set encoding=UTF-8
 
+" git message
+autocmd FileType gitcommit setlocal textwidth=0
+
 " vim / neovim
 if !has('nvim')
   set noesckeys         " remove the latency of pressing <ESC> in insert mode. see ':h noesckeys'
@@ -240,8 +243,8 @@ set statusline+=%-19(%3l/%L,\ %02c%)
 let mapleader=" "
 
 " window size
-noremap <silent> + :res+5<CR>
-noremap <silent> _ :res-5<CR>
+noremap <silent> <F9> :res+5<CR>
+noremap <silent> <F10> :res-5<CR>
 noremap <silent> <F3> :vertical:res+5<CR>
 noremap <silent> <F4> :vertical:res-5<CR>
 noremap <silent> <C-UP> :LargerFont<CR>
