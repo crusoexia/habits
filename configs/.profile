@@ -21,7 +21,9 @@ if [ -e "$HOME/.profile-wsl" ]; then
 fi
 
 if command -v tmuxinator &> /dev/null && [ -z "$TMUX" ]; then
+  if [ "${TERM_PROGRAM:-}" != "vscode" ] && [ -z "${VSCODE_IPC_HOOK_CLI:-}" ]; then
     tmuxinator start default
+  fi
 fi
 
 # vim-notes directory
